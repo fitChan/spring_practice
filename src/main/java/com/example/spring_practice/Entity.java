@@ -1,19 +1,22 @@
 package com.example.spring_practice;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
-@Data
+@AllArgsConstructor @NoArgsConstructor
+@Data @jakarta.persistence.Entity
 public class Entity {
 
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer idx;
 
-    private String test;
+    private String PRIVATE_KEY;
+    private String PUBLIC_KEY;
+    private String ENC_TEXT;
 
-    public Entity() {
-    }
-
-    public Entity(Integer idx, String test) {
-        this.idx = idx;
-        this.test = test;
-    }
 }

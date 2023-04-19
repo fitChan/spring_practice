@@ -17,7 +17,7 @@ public class KeyGenTest {
     private final PrivateKey privateKey;
     private final PublicKey publicKey;
 
-    public KeyGenTest() throws NoSuchAlgorithmException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException, NoSuchProviderException, InvalidKeyException {
+    public KeyGenTest() throws NoSuchAlgorithmException{
 
         KeyPairGenerator kpg = KeyPairGenerator.getInstance("RSA");
         kpg.initialize(2048);
